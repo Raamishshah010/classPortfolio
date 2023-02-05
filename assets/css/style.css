@@ -1,0 +1,465 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        font-size: 62.5%;
+        /*  1rem = 10px*/
+        background-color: #271762;
+        color: #fff;
+        overflow-x: hidden;
+    }
+
+    /* Header */
+
+    .header {
+        padding-inline: 5rem;
+        padding-block: 4rem;
+        background-image: url('../images/headerBg.png');
+        height: 100vh;
+        background-repeat: no-repeat;
+    }
+
+    /* navbarCustom */
+
+    .header .navbarCustom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header .navbarCustom .navbarLogo h5 {
+        font-weight: 800;
+    }
+
+
+    .header .navbarCustom .navbarLinks {
+        display: flex;
+        gap: 3rem;
+        list-style: none;
+        font-size: 1rem;
+    }
+
+    /* hero */
+
+    .hero {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+    }
+
+    .hero .heroImage {
+        flex: 1;
+        margin-left: 15rem;
+    }
+
+
+    .hero .heroContent {
+        flex: 1;
+    }
+
+
+    .hero .heroContent h5 {
+        font-size: 1.2rem;
+        color: #93C8E7;
+    }
+
+
+    .hero .heroContent h1 {
+        font-size: 3rem;
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    .hero .heroContent h1::after {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        height: 3px;
+        width: 7rem;
+        bottom: -20%;
+        left: 0;
+    }
+
+    .hero .heroContent p {
+        font-size: 1rem;
+        color: #fff;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+
+
+    .hero .heroContent button {
+        font-size: 1rem;
+        background-color: #D9D9D9;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        padding: .4rem 2rem;
+        border: none;
+        border-radius: 8px;
+    }
+
+
+
+    /* aboutUs */
+
+    .aboutUs {
+        margin-top: 4rem;
+
+    }
+
+    .aboutUs .aboutImg img {
+        transform: translateX(-12rem);
+    }
+
+
+    .aboutUs .aboutContent {
+        margin-top: 10rem;
+    }
+
+    .aboutUs .aboutContent h5 {
+        font-size: 2rem;
+        color: #fff;
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+    .aboutUs .aboutContent h5::after {
+        content: "";
+        position: absolute;
+        bottom: -.6rem;
+        left: 0;
+        background-color: #ffff;
+        height: 3px;
+        width: 3rem;
+
+    }
+
+    .aboutUs .aboutContent p {
+        font-size: 1rem;
+        font-weight: 300;
+        margin-bottom: 4rem;
+    }
+
+    .btn-icon {
+        font-size: 1rem;
+    }
+
+
+
+    /* skills */
+
+
+    .skills {
+        text-align: center;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        background-color: #251755;
+        padding-block: 4rem;
+    }
+
+    .skills h5 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        position: relative;
+        display: inline-block;
+    }
+
+    .skills h5::after {
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        bottom: -.6rem;
+        width: 100%;
+        height: 3px;
+
+    }
+
+    .skills p {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+
+    /* Skill Bar Card */
+
+    .skills .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: transparent;
+        margin: 0 20px;
+        width: 280px;
+        height: 350px;
+        border-radius: 5px;
+        border: none;
+        /* box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2); */
+    }
+
+    .skills .card .percent {
+        position: relative;
+    }
+
+    .skills .card svg {
+        position: relative;
+        width: 210px;
+        height: 210px;
+        transform: rotate(-90deg);
+    }
+
+    .skills .card svg circle {
+        width: 100%;
+        height: 100%;
+        fill: none;
+        stroke: #f0f0f0;
+        stroke-width: 10;
+        stroke-linecap: round;
+    }
+
+    .skills .card svg circle:last-of-type {
+        stroke-dasharray: 1900px;
+        stroke-dashoffset: calc(1900px - (1900px * var(--percent)) / 100);
+        stroke: #6F88FE;
+    }
+
+    .skills .card .number {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .skills .card .number h3 {
+        font-weight: 200;
+        font-size: 1rem;
+    }
+
+    .skills .card .number h3 span {
+        font-size: 1rem;
+    }
+
+    .skills .card .title h2 {
+        margin: 25px 0 0;
+    }
+
+    .skills .card:nth-child(1) svg circle:last-of-type {
+        stroke: #6F88FE;
+    }
+
+    .skills .card:nth-child(2) svg circle:last-of-type {
+        stroke: #6F88FE;
+    }
+
+
+    /* activeJob */
+
+
+    .activeJob {
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+
+    }
+
+    .activeJob .activeJobCards {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .activeJob .activeJobCards .activeJobCardTop {
+        background-color: #6F88FE;
+        /* padding: 2rem; */
+        padding-top: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 200px;
+        height: 160px;
+        text-align: center;
+    }
+
+    .activeJob .activeJobCards .activeJobCardTop h5 {
+        font-size: 1rem;
+    }
+
+    .activeJob .activeJobCards .activeJobCardTop p {
+        font-size: 1rem;
+    }
+
+
+    .activeJob .activeJobCardBottom {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+
+    .activeJob .activeJobCardBottom .activeJobCardBottomOne {
+        background-color: #ffff;
+        /* padding: 2rem; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 200px;
+        height: 160px;
+        padding-top: 2rem;
+        text-align: center;
+        color: #3a3a3a;
+    }
+
+    .activeJob .activeJobCardBottom .activeJobCardBottomOne p {
+        font-size: 1rem;
+    }
+
+    .activeJob .activeJobCardBottom .activeJobCardBottomOne h5 {
+        font-size: 1rem;
+    }
+
+    /* activeJobContent */
+    .activeJob .activeJobContent {
+        margin-top: 8rem;
+    }
+    .activeJob .activeJobContent h5 {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    .activeJob .activeJobContent p {
+        font-size: 1rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+    }
+
+
+    .btn-custom{
+        font-size: .9rem;
+        padding-inline: 2rem;
+    }
+
+
+
+    /* latestWork */
+
+
+    .latestWork{
+        margin-top: 8rem;
+        margin-bottom: 3rem;
+        text-align: center;
+
+    }
+
+    .latestWork h5{
+        font-size: 1.4rem;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    .latestWork h5::after{
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        height: 3px;
+        width: 4rem;
+        bottom: -10px;
+        left: 30px;
+    }
+
+    .latestWork p{
+        font-size: 1rem;
+        
+        font-weight: 300;
+    }
+
+
+
+    .latestWork .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        color: #271762;
+        background-color: #6F88FF;
+        border-color:transparent;
+        padding-inline: 2rem;
+        font-size: .8rem;
+        border-radius: 1.3rem;
+    }
+
+    .latestWork .nav-tabs {
+        border-bottom: 1px solid transparent;
+        margin-bottom: 3rem;
+        margin-top: 4rem;
+    }
+
+    .latestWork .nav-tabs .nav-link {
+        border: 1px solid transparent;
+        border-radius: 20px;
+        color: #fff;
+        font-size: .8rem;
+        margin-left: 2rem;
+        border: 1px solid #6F88FF;
+    }
+
+
+    /* workImages */
+    .workImages{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+    gap: 2rem;
+    }
+
+    .workImages .workImagesChild1{
+        display: flex;
+        flex-direction: column;
+        gap: 1.7rem;
+    }
+
+    .workImages .workImagesChild2{
+        display: flex;
+        flex-direction: column;
+        gap: 1.7rem;
+    }
+
+
+    .working{
+        position: relative;
+    }
+    
+
+    .working .workingContent{
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        background-color:#6f87ff87;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: .5s;
+
+    }
+    .working .workingContent:hover{
+        opacity: 1;
+    }
+    .working .workingContent h4{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
